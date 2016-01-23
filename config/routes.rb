@@ -5,7 +5,10 @@ Rails.application.routes.draw do
 
   root 'breweries#index'
   
+  #Ratings stuff:
   get 'ratings', to: 'ratings#index'
+  get 'ratings/new', to:'ratings#new'
+  post 'ratings', to: 'ratings#create'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

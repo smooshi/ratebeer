@@ -1,3 +1,5 @@
+require "byebug"
+
 class Rating < ActiveRecord::Base
 	belongs_to :beer
 	

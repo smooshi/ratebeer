@@ -4,14 +4,17 @@ class Beer < ActiveRecord::Base
 	
 	def average_rating
 		if ratings.count > 0
-			ka = 0
-			count = 0
-			ratings.each do |r|
-				ka = ka + r.score
-				count = count + 1
-			end
-			return ka/count
+			return ratings.map { |h| h[:score] }.sum/ratings.count
 		end
 	end
 	
+	def monikko(count, singular, plural = nil)
+		word = if (count == 1 || count =~ /^1(\.0+)?$/)
+			singular
+		else
+			plural || singular.pluralize
+		end
+		
+		"#{word}"
+	end
 end
