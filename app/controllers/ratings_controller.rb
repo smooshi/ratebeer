@@ -1,5 +1,3 @@
-
-
 class RatingsController < ApplicationController
 
   def index
