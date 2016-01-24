@@ -1,4 +1,4 @@
 # ratebeer
 wepa
 
-https://mighty-wildwood-44052.herokuapp.com/beers
+https://damp-beyond-13231.herokuapp.com/beers
