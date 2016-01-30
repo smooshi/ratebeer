@@ -19,6 +19,12 @@
 		 <% end %>
 	</tbody>
 </table>
+<p>
+	<% if @brewery.ratings.empty? %>
+			Brewery has not yet been rated!
+	<% else %>
+			Brewery has <%= @brewery.ratings.count %> <%= @brewery.monikko(@brewery.ratings.count, 'rating', 'ratings') %>, average <%= @brewery.average_rating %>
+	<% end %>
 </p>
 <%= link_to 'Edit', edit_brewery_path(@brewery) %> |
 <%= link_to 'Back', breweries_path %>

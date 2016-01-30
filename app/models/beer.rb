@@ -1,12 +1,7 @@
 class Beer < ActiveRecord::Base
 	belongs_to :brewery
-	has_many :ratings
-	
-	def average_rating
-		if ratings.count > 0
-			return ratings.map { |h| h[:score] }.sum/ratings.count
-		end
-	end
+	has_many :ratings, dependent: :destroy
+	include Average
 	
 	def monikko(count, singular, plural = nil)
 		word = if (count == 1 || count =~ /^1(\.0+)?$/)
@@ -16,5 +11,9 @@ class Beer < ActiveRecord::Base
 		end
 		
 		"#{word}"
+	end
+
+	def to_s
+		return "#{self.name}" + " " + "#{self.brewery.name}"
 	end
 end
