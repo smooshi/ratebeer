@@ -1,4 +1,4 @@
 # ratebeer
 wepa
 
-https://damp-beyond-13231.herokuapp.com/beers
+http://gentle-coast-91732.herokuapp.com/

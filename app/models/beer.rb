@@ -6,8 +6,6 @@ class Beer < ActiveRecord::Base
 
 	include Average, Monikko
 
-	validates :username, presence: true
-
 	def to_s
 		return "#{self.name}" + " " + "#{self.brewery.name}"
 	end

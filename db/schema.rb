@@ -21,14 +21,6 @@ ActiveRecord::Schema.define(version: 20160207163553) do
     t.datetime "updated_at"
   end
 
-  create_table "beerclubs", force: true do |t|
-    t.string   "name"
-    t.integer  "founded"
-    t.string   "city"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "beers", force: true do |t|
     t.string   "name"
     t.string   "style"
