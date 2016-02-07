@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @user.username %>
+</p>
+<p>
+  Ratings:<p>
+  <% @user.ratings.each do |rating| %>
+    <li> <%= rating.to_s %> <%= link_to 'delete', rating, method: :delete, data: { confirm: 'Are you sure?' } %> </li></li>
+<% end %>
+  </p>
+<% if @user.ratings.empty? %>
+    User hasn't rated anything yet.
+<% else %>
+    User has <%= @user.ratings.count %> <%= @user.monikko(@user.ratings.count, 'rating', 'ratings') %>, average <%= @user.average_rating %>
+<% end %>
+</p>
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
