@@ -1,7 +1,12 @@
 class Brewery < ActiveRecord::Base
 	has_many :beers, dependent: :destroy
 	has_many :ratings, through: :beers
-	include Average
+	include Average, Monikko
+
+	validates :username, presence: true
+	validates :year,
+						presence: true,
+						numericality: { only_integer: true, greater_than_or_equal_to: 1042, less_than_or_equal_to: Date.today.year }
 
 	def print_report
 		puts name
@@ -14,13 +19,4 @@ class Brewery < ActiveRecord::Base
 		puts "changed year to #{year}"
     end
 
-  def monikko(count, singular, plural = nil)
-    word = if (count == 1 || count =~ /^1(\.0+)?$/)
-             singular
-           else
-             plural || singular.pluralize
-           end
-
-    "#{word}"
-  end
 end

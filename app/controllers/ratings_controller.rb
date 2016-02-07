@@ -12,13 +12,18 @@ class RatingsController < ApplicationController
   def create
     #require 'byebug'
       #byebug
-    rating = Rating.create params.require(:rating).permit(:score, :beer_id)
+    @rating = Rating.create params.require(:rating).permit(:score, :beer_id)
 
     # talletetaan tehdyn reittauksen sessioon
-    session[:last_rating] = "#{rating.beer.name} #{rating.score} points"
+    #session[:last_rating] = "#{rating.beer.name} #{rating.score} points"
 
-    current_user.ratings << rating
-    redirect_to current_user
+    if @rating.save
+      current_user.ratings << @rating
+      redirect_to user_path current_user
+    else
+      @beers = Beer.all
+      render :new
+    end
   end
 
   def destroy
