@@ -29,7 +29,7 @@ class User < ActiveRecord::Base
     ratings.group_by{|rating| rating.beer.brewery.name}.each do |name, group|
         breweries[name] = group.map { |h| h[:score] }.sum/group.count
     end
-    return breweries.sort_by{|k,v| v}.first[0]
+    return breweries.sort_by{|k,v| v}.last[0]
   end
 
   def favorite_style
@@ -38,6 +38,6 @@ class User < ActiveRecord::Base
     ratings.group_by{|rating| rating.beer.style}.each do |name, group|
       styles[name] = group.map { |h| h[:score] }.sum/group.count
     end
-    return styles.sort_by{|k,v| v}.first[0]
+    return styles.sort_by{|k,v| v}.last[0]
   end
 end
