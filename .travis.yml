@@ -3,6 +3,8 @@ language: ruby
 rvm:
  - 2.0.0
 
+gemfile: TravisGemfile
+
 script:
  - bundle exec rake db:migrate --trace
  - RAILS_ENV=test bundle exec rake db:migrate --trace
