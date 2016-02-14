@@ -18,4 +18,26 @@ class User < ActiveRecord::Base
 
   has_secure_password
 
+  def favorite_beer
+    return nil if ratings.empty?
+    ratings.sort_by(&:score).last.beer
+  end
+
+  def favorite_brewery
+    return nil if ratings.empty?
+    breweries = Hash.new(0)
+    ratings.group_by{|rating| rating.beer.brewery.name}.each do |name, group|
+        breweries[name] = group.map { |h| h[:score] }.sum/group.count
+    end
+    return breweries.sort_by{|k,v| v}.first[0]
+  end
+
+  def favorite_style
+    return nil if ratings.empty?
+    styles = Hash.new(0)
+    ratings.group_by{|rating| rating.beer.style}.each do |name, group|
+      styles[name] = group.map { |h| h[:score] }.sum/group.count
+    end
+    return styles.sort_by{|k,v| v}.first[0]
+  end
 end

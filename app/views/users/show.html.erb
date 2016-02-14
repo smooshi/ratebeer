@@ -8,10 +8,12 @@
   Ratings:<p>
   <% @user.ratings.each do |rating| %>
     <li>
+      <div class="rating">
       <%= rating %>
       <% if @user == current_user %>
           <%= link_to 'delete', rating, method: :delete, data: { confirm: 'Are you sure?' } %>
       <% end %>
+          </div>
     </li>
 <% end %>
   </p>
@@ -20,6 +22,11 @@
 <% else %>
     User has <%= @user.ratings.count %> <%= @user.monikko(@user.ratings.count, 'rating', 'ratings') %>, average <%= @user.average_rating %>
 <% end %>
+</p>
+<p>
+  Favourite Style: <%= @user.favorite_style %></p>
+<p>
+  Favourite Brewery: <%= @user.favorite_brewery %>
 </p>
 <p>
   Club Memberships:
