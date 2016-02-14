@@ -4,8 +4,9 @@ include Helpers
 
 describe "User" do
   let!(:brewery) { FactoryGirl.create :brewery, name:"Koff" }
+  let!(:brewery2) { FactoryGirl.create :brewery, name:"BrewDog" }
   let!(:beer1) { FactoryGirl.create :beer, name:"iso 3", brewery:brewery }
-  let!(:beer2) { FactoryGirl.create :beer, name:"Karhu", brewery:brewery }
+  let!(:beer2) { FactoryGirl.create :beer, name:"Karhu", brewery:brewery2 }
   let!(:user) { FactoryGirl.create :user }
   let!(:rating10) { FactoryGirl.create :rating10, beer:beer1, user:user }
   let!(:rating20) { FactoryGirl.create :rating20, beer:beer2, user:user }
@@ -62,6 +63,6 @@ describe "User" do
   it "user has correct favorite brewery" do
     sign_in(username:"Pekka", password:"Foobar1")
     click_link 'Pekka'
-    expect(page).to have_content 'Koff'
+    expect(page).to have_content 'BrewDog'
   end
 end

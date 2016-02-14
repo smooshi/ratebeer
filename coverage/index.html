@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-02-14T21:19:33+02:00">2016-02-14T21:19:33+02:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-02-14T23:43:02+02:00">2016-02-14T23:43:02+02:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.27
+         2.32
        </span>
     </span> hits/line)
   </h2>
@@ -277,7 +277,7 @@
         <td>25</td>
         <td>25</td>
         <td>0</td>
-        <td>11.3</td>
+        <td>12.0</td>
       </tr>
       
       <tr>
@@ -420,7 +420,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         6.12
+         6.36
        </span>
     </span> hits/line)
   </h2>
@@ -522,7 +522,7 @@
         <td>25</td>
         <td>25</td>
         <td>0</td>
-        <td>11.3</td>
+        <td>12.0</td>
       </tr>
       
     </tbody>
@@ -4694,8 +4694,8 @@
           <code class="ruby">    ratings.group_by{|rating| rating.beer.brewery.name}.each do |name, group|</code>
         </li>
       
-        <li class="covered" data-hits="39" data-linenumber="30">
-          <span class="hits">39</span>
+        <li class="covered" data-hits="48" data-linenumber="30">
+          <span class="hits">48</span>
           
           <code class="ruby">        breweries[name] = group.map { |h| h[:score] }.sum/group.count</code>
         </li>
@@ -4706,10 +4706,10 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="26" data-linenumber="32">
-          <span class="hits">26</span>
+        <li class="covered" data-hits="35" data-linenumber="32">
+          <span class="hits">35</span>
           
-          <code class="ruby">    return breweries.sort_by{|k,v| v}.first[0]</code>
+          <code class="ruby">    return breweries.sort_by{|k,v| v}.last[0]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="33">
@@ -4763,7 +4763,7 @@
         <li class="covered" data-hits="26" data-linenumber="41">
           <span class="hits">26</span>
           
-          <code class="ruby">    return styles.sort_by{|k,v| v}.first[0]</code>
+          <code class="ruby">    return styles.sort_by{|k,v| v}.last[0]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="42">
