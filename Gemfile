@@ -25,7 +25,7 @@ group :test do
   gem 'launchy'
   gem 'simplecov', require: false
 end
-
+gem "nokogiri"
 gem 'web-console', group: :development
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
