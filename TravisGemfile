@@ -25,6 +25,7 @@ group :test do
   gem 'launchy'
   gem 'simplecov', require: false
 end
+gem 'rspec-its'
 gem "nokogiri"
 gem 'web-console', group: :development
 # Use SCSS for stylesheets
