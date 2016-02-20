@@ -20,4 +20,8 @@ class PlacesController < ApplicationController
       end
     end
   end
+
+  def set_place
+
+  end
 end
