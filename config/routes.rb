@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :breweries
 
   root 'breweries#index'
-  
+
   #Ratings stuff:
   #get 'ratings', to: 'ratings#index'
   #get 'ratings/new', to:'ratings#new'
@@ -26,7 +26,9 @@ Rails.application.routes.draw do
   get 'signout', to: 'sessions#destroy'
   delete 'signout', to: 'sessions#destroy'
 
-
+  #PLACES STUFF:
+  resources :places, only:[:index, :show]
+  post 'places', to:'places#search'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
