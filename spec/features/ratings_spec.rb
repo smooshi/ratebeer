@@ -4,8 +4,10 @@ include Helpers
 
 describe "Rating" do
   let!(:brewery) { FactoryGirl.create :brewery, name:"Koff" }
-  let!(:beer1) { FactoryGirl.create :beer, name:"iso 3", brewery:brewery }
-  let!(:beer2) { FactoryGirl.create :beer, name:"Karhu", brewery:brewery }
+  let!(:style1) { FactoryGirl.create :style, name:"Lager" }
+  let!(:style2) { FactoryGirl.create :style, name:"IPA" }
+  let!(:beer1) { FactoryGirl.create :beer, name:"iso 3", brewery:brewery, style:style1 }
+  let!(:beer2) { FactoryGirl.create :beer, name:"Karhu", brewery:brewery, style:style2 }
   let!(:user) { FactoryGirl.create :user }
   let!(:rating10) { FactoryGirl.create :rating10, beer:beer1, user:user }
   let!(:rating20) { FactoryGirl.create :rating20, beer:beer2, user:user }

@@ -35,15 +35,20 @@ FactoryGirl.define do
     year 1901
   end
 
+  factory :style  do
+    name "anonymous"
+    description "Mumbojumbo."
+  end
+
+  factory :style_IPA, class: Style do
+    name "IPA"
+    description "It's an Indian Pale Ale. Yay!"
+  end
+
   factory :beer do
     name "anonymous"
     brewery
-    style "Lager"
+    style
   end
 
-  factory :beer_ipa do
-    name "Punk"
-    brewery
-    style "IPA"
-  end
 end
