@@ -4,7 +4,7 @@ class Beer < ActiveRecord::Base
 	has_many :ratings, dependent: :destroy
 	has_many :users, through: :ratings
 
-	include Average, Monikko
+	include Average, Monikko, ApplicationHelper
 
 	validates :name,  { presence: true}
 
@@ -12,5 +12,9 @@ class Beer < ActiveRecord::Base
 
 	def to_s
 		return "#{self.name}" + " " + "#{self.brewery.name}"
+	end
+
+  def self.top(n)
+		return Beer.all.sort_by(&:average_rating).reverse.first(n)
 	end
 end

@@ -7,6 +7,7 @@ class Rating < ActiveRecord::Base
 																		only_integer: true }
 
 	#validates :user_id, presence: true
+	scope :ordered_by_reverse_order, -> { order('created_at DESC') }
 
 	def to_s
 		return "#{self.beer.name}" + " Score: " + "#{self.score}"

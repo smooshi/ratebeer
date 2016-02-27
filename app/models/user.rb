@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   has_many :memberships, dependent: :destroy
   has_many :beer_clubs, through: :memberships
 
-  include Average, Monikko
+  include Average, Monikko, ApplicationHelper
 
   PASSWORD_FORMAT = /\A
     (?=.*\d)           # Must contain a digit
@@ -17,7 +17,6 @@ class User < ActiveRecord::Base
   validates  :password, length: { minimum: 4 }, format: {with: PASSWORD_FORMAT}
 
   has_secure_password
-
   def favorite_beer
     return nil if ratings.empty?
     ratings.sort_by(&:score).last.beer
@@ -39,5 +38,14 @@ class User < ActiveRecord::Base
       styles[name] = group.map { |h| h[:score] }.sum/group.count
     end
     return styles.sort_by{|k,v| v}.last[0].name
+  end
+
+  def num_of_ratings
+    return 0 if ratings.empty?
+    return ratings.count
+  end
+
+  def self.active(n)
+    return User.all.sort_by(&:num_of_ratings).reverse.first(n)
   end
 end

@@ -3,4 +3,6 @@ class BeerClub < ActiveRecord::Base
   has_many :users, through: :memberships
 
   validates :name, uniqueness: true
+  include ApplicationHelper
+
 end

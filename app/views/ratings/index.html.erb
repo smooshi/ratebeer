@@ -1,9 +1,48 @@
-<h1>Listing ratings</h1>
 
-<p> Number of ratings: <%= @ratings.count %> </p>
-
-<ul>
- <% @ratings.each do |rating| %>
-   <li> <%= rating.to_s %> <%= link_to rating.user.username, rating.user %> </li></li>
- <% end %>
+<div class="page-header">
+  <h1>Rating Statistics
+    <small>Total number of ratings: <%= @ratings.count %> </small></h1>
+</div>
+<div class="row">
+  <div class="row">
+    <div class="col-xs-8 col-sm-6">
+      <h3>Newest Ratings:</h3>
+      <% @newest_rating.first(5).each do |rating| %>
+          <li class="list-group-item"> <%= rating.to_s %> by <%= link_to rating.user.username, rating.user %> </li>
+      <% end %>
+    </div>
+    <div class="col-xs-8 col-sm-6">
+      <h3>Most Active Users:</h3>
+      <% @users.first(3).each do |user| %>
+          <li class="list-group-item"> <%= user.num_of_ratings %> ratings by <%= link_to user.username, user %> with an average rating of: <%= user.average_rating %></li>
+      <% end %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-8 col-sm-6">
+      <h3>Best Rated Beers:</h3>
+      <p>
+        <%= render 'list', items: @beers %>
+      </p>
+      </div>
+    <div class="col-xs-8 col-sm-6">
+      <h3>Best Rated Breweries:</h3>
+      <p>
+        <%= render 'list', items: @breweries %>
+      </p>
+      </div>
+    <div class="col-xs-8 col-sm-6">
+      <h3>Best Rated Styles:</h3>
+      <p>
+        <%= render 'list', items: @styles %>
+      </p>
+      </div>
+  </div>
+</div>
+<p></p>
+All Ratings:
+<ul class="list-group">
+  <% @ratings.each do |rating| %>
+      <li class="list-group-item"> <%= rating.to_s %> by <%= link_to rating.user.username, rating.user %> </li>
+  <% end %>
 </ul>

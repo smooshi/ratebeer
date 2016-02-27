@@ -1,8 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <h2><%= @brewery.name %></h2>
-</p>
+<h2><%= @brewery.name %>
+  <% if not @brewery.active  %>
+      <span class="label label-info">retired</span>
+  <% end %>
+</h2>
 
 <p>
   <i>Established at <%= @brewery.year %></i>
@@ -26,5 +28,5 @@
 			Brewery has <%= @brewery.ratings.count %> <%= @brewery.monikko(@brewery.ratings.count, 'rating', 'ratings') %>, average <%= @brewery.average_rating %>
 	<% end %>
 </p>
-<%= link_to 'Edit', edit_brewery_path(@brewery) %> |
-<%= link_to 'Back', breweries_path %>
+<%= edit_and_destroy_buttons(@brewery) %>
+

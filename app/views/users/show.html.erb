@@ -1,41 +1,47 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Username:</strong>
-  <%= @user.username %>
+<div class="page-header">
+  <h1>Username:
+  <small><%= @user.username %></small></h1>
+  </div>
 </p>
 <p>
-  Ratings:<p>
+  <h2>Ratings:</h2><p>
+  <% if @user.ratings.empty? %>
+      User hasn't rated anything yet.
+  <% else %>
+      User has <%= @user.ratings.count %> <%= @user.monikko(@user.ratings.count, 'rating', 'ratings') %>, average <%= @user.average_rating %>
+  <% end %>
+  </p><p>
   <% @user.ratings.each do |rating| %>
-    <li>
-      <div class="rating">
+    <ul class="list-group">
+    <li class="list-group-item">
       <%= rating %>
       <% if @user == current_user %>
           <%= link_to 'delete', rating, method: :delete, data: { confirm: 'Are you sure?' } %>
       <% end %>
-          </div>
     </li>
+    </ul>
+    </p>
 <% end %>
   </p>
-<% if @user.ratings.empty? %>
-    User hasn't rated anything yet.
-<% else %>
-    User has <%= @user.ratings.count %> <%= @user.monikko(@user.ratings.count, 'rating', 'ratings') %>, average <%= @user.average_rating %>
-<% end %>
+
 </p>
+<div class="jumbotron">
+  <p>
+    Favourite Style: <%= @user.favorite_style %></p>
+  <p>
+    Favourite Brewery: <%= @user.favorite_brewery %>
+  </p>
+</div>
 <p>
-  Favourite Style: <%= @user.favorite_style %></p>
+  <h2>Club Memberships:</h2></p>
 <p>
-  Favourite Brewery: <%= @user.favorite_brewery %>
-</p>
-<p>
-  Club Memberships:
   <% @user.beer_clubs.each do |club| %>
-    <li><%= link_to club.name, club %></li>
+    <ul class="list-group">
+      <li class="list-group-item"><%= link_to club.name, club %></li>
     <% end %>
+  </ul>
     </p>
-    <% if @user == current_user %>
-      <%= link_to 'Edit', edit_user_path(@user) %>
-      <%= link_to 'Destroy', @user, method: :delete, data: { confirm: 'Are you sure?' } %>
-    <% end %>
-<%= link_to 'Back', users_path %>
+<%= edit_and_destroy_buttons(@user) %>

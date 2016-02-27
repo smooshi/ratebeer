@@ -4,6 +4,11 @@ ruby '2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
 # Use sqlite3 as the database for Active Record
+gem 'bootstrap-sass'
+group :development do
+  gem 'rails_layout'
+end
+
 group :development, :test do
   gem 'sqlite3'
   gem "better_errors"
@@ -26,6 +31,7 @@ group :test do
   gem 'simplecov', require: false
   gem 'webmock'
 end
+
 gem 'rspec-its'
 gem "nokogiri"
 gem 'web-console', group: :development

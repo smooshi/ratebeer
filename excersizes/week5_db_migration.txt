@@ -1,0 +1,19 @@
+Create some styles:
+
+Style.create name:"Weizen", description:"White beer or something"
+Style.create name:"IPA", description:"Indian Pale Ale is... hoppy? "
+Style.create name:"Lager", description:"I've heard Lager is bad."
+Style.create name:"Pale Ale", description:"It's like IPA, but not Indian. Maybe German?"
+Style.create name:"Porter", description:"I don't know what it is. Something to do with ports."
+
+Link Beers To Styles:
+
+Beer.all.each do |beer| 
+st = Style.find_by_name(beer.old_style)
+st.beers << beer
+end
+
+
+Testing: 
+
+rake db:migrate rails_env=test
