@@ -17,27 +17,25 @@ class User < ActiveRecord::Base
   validates  :password, length: { minimum: 4 }, format: {with: PASSWORD_FORMAT}
 
   has_secure_password
-  def favorite_beer
-    return nil if ratings.empty?
-    ratings.sort_by(&:score).last.beer
+
+  def favorite_style
+    favorite :style
   end
 
   def favorite_brewery
-    return nil if ratings.empty?
-    breweries = Hash.new(0)
-    ratings.group_by{|rating| rating.beer.brewery.name}.each do |name, group|
-        breweries[name] = group.map { |h| h[:score] }.sum/group.count
-    end
-    return breweries.sort_by{|k,v| v}.last[0]
+    favorite :brewery
   end
 
-  def favorite_style
+  def favorite(category)
     return nil if ratings.empty?
-    styles = Hash.new(0)
-    ratings.group_by{|rating| rating.beer.style}.each do |name, group|
-      styles[name] = group.map { |h| h[:score] }.sum/group.count
-    end
-    return styles.sort_by{|k,v| v}.last[0].name
+
+    rated = ratings.map{ |r| r.beer.send(category) }.uniq
+    rated.sort_by { |item| -rating_of(category, item) }.first
+  end
+
+  def rating_of(category, item)
+    ratings_of = ratings.select{ |r| r.beer.send(category)==item }
+    ratings_of.map(&:score).inject(&:+) / ratings_of.count.to_f
   end
 
   def num_of_ratings

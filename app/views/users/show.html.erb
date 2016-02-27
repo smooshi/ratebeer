@@ -6,6 +6,9 @@
   <small><%= @user.username %></small></h1>
   </div>
 </p>
+<% if @user.active == false  %>
+    <span class="label label-info">Account Frozen</span>
+<% end %>
 <p>
   <h2>Ratings:</h2><p>
   <% if @user.ratings.empty? %>
@@ -30,9 +33,9 @@
 </p>
 <div class="jumbotron">
   <p>
-    Favourite Style: <%= @user.favorite_style %></p>
+    Favourite Style: <%= @user.favorite_style.name %></p>
   <p>
-    Favourite Brewery: <%= @user.favorite_brewery %>
+    Favourite Brewery: <%= @user.favorite_brewery.name %>
   </p>
 </div>
 <p>
@@ -43,5 +46,17 @@
       <li class="list-group-item"><%= link_to club.name, club %></li>
     <% end %>
   </ul>
-    </p>
-<%= edit_and_destroy_buttons(@user) %>
+</p>
+
+<% if @user == current_user %>
+    <%= link_to 'Delete account', @user, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to 'Edit', edit_user_path(@user) %>
+<% end %>
+<p></p>
+<% if current_user.admin == true%>
+    <% if @user.active == true %>
+      <%= link_to('Freeze Account', toggle_activity_user_path(@user.id), method: :post, class:"btn btn-primary")%>
+    <%else%>
+        <%= link_to('Restore Account', toggle_activity_user_path(@user.id), method: :post, class:"btn btn-primary")%>
+    <%end%>
+<% end%>

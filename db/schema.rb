@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160227142928) do
+ActiveRecord::Schema.define(version: 20160227180233) do
 
   create_table "beer_clubs", force: true do |t|
     t.string   "name"
@@ -72,6 +72,8 @@ ActiveRecord::Schema.define(version: 20160227142928) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "password_digest"
+    t.boolean  "admin",           default: false
+    t.boolean  "active",          default: true
   end
 
 end
