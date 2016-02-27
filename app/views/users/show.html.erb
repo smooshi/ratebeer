@@ -31,6 +31,7 @@
   </p>
 
 </p>
+<% if @user.ratings.any? %>
 <div class="jumbotron">
   <p>
     Favourite Style: <%= @user.favorite_style.name %></p>
@@ -38,6 +39,7 @@
     Favourite Brewery: <%= @user.favorite_brewery.name %>
   </p>
 </div>
+    <%end%>
 <p>
   <h2>Club Memberships:</h2></p>
 <p>
