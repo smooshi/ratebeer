@@ -11,7 +11,7 @@
   <% if @user.ratings.empty? %>
       User hasn't rated anything yet.
   <% else %>
-      User has <%= @user.ratings.count %> <%= @user.monikko(@user.ratings.count, 'rating', 'ratings') %>, average <%= @user.average_rating %>
+      User has <%= @user.ratings.count %> <%= @user.monikko(@user.ratings.count, 'rating', 'ratings') %>, average <%= round(@user.average_rating) %>
   <% end %>
   </p><p>
   <% @user.ratings.each do |rating| %>

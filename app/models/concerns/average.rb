@@ -3,7 +3,7 @@ module Average
   extend ActiveSupport::Concern
   def average_rating
     if ratings.count > 0
-      return ratings.map { |h| h[:score] }.sum/ratings.count
+      ratings.inject(0.0){ |sum, r| sum+r.score } / ratings.count
     else
       return 0
     end
