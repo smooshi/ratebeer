@@ -53,12 +53,12 @@
 <% if @user == current_user %>
     <%= link_to 'Delete account', @user, method: :delete, data: { confirm: 'Are you sure?' } %>
     <%= link_to 'Edit', edit_user_path(@user) %>
-<% end %>
 <p></p>
-<% if current_user.admin == true%>
-    <% if @user.active == true %>
-      <%= link_to('Freeze Account', toggle_activity_user_path(@user.id), method: :post, class:"btn btn-primary")%>
-    <%else%>
-        <%= link_to('Restore Account', toggle_activity_user_path(@user.id), method: :post, class:"btn btn-primary")%>
-    <%end%>
-<% end%>
+  <% if current_user.admin == true%>
+      <% if @user.active == true %>
+        <%= link_to('Freeze Account', toggle_activity_user_path(@user.id), method: :post, class:"btn btn-primary")%>
+      <%else%>
+          <%= link_to('Restore Account', toggle_activity_user_path(@user.id), method: :post, class:"btn btn-primary")%>
+      <%end%>
+  <% end%>
+<% end %>
