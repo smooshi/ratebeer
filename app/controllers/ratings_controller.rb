@@ -2,7 +2,7 @@ class RatingsController < ApplicationController
 
   def index
   #@users = User.all.sort_by(&:num_of_ratings).reverse
-  @users = User.active(3)
+  @users = User.mostActive(3)
   @beers = Beer.top(3)
   @breweries = Brewery.top(3)
 	@ratings = Rating.all

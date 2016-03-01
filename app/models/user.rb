@@ -18,6 +18,11 @@ class User < ActiveRecord::Base
 
   has_secure_password
 
+  def favorite_beer
+    return nil if ratings.empty?
+    ratings.order(score: :desc).limit(1).first.beer
+  end
+
   def favorite_style
     favorite :style
   end
@@ -43,7 +48,7 @@ class User < ActiveRecord::Base
     return ratings.count
   end
 
-  def self.active(n)
+  def self.mostActive(n)
     return User.all.sort_by(&:num_of_ratings).reverse.first(n)
   end
 end

@@ -2,10 +2,7 @@
 module Average
   extend ActiveSupport::Concern
   def average_rating
-    if ratings.count > 0
-      ratings.inject(0.0){ |sum, r| sum+r.score } / ratings.count
-    else
-      return 0
-    end
+    return 0 if ratings.count == 0
+    ratings.inject(0.0){ |sum, r| sum+r.score } / ratings.count
   end
 end

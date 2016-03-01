@@ -1,12 +1,41 @@
 class BreweriesController < ApplicationController
   before_action :set_brewery, only: [:show, :edit, :update, :destroy]
   before_action :ensure_that_signed_in, except: [:index, :show]
+  include Order
 
   # GET /breweries
   # GET /breweries.json
   def index
-    @active_breweries = Brewery.active
-    @retired_breweries = Brewery.retired
+    if session[:last_order] != nil
+          @active_breweries = Brewery.active.sort_by{ |i| i.send(session[:last_order]) }
+          @retired_breweries = Brewery.retired.sort_by{ |i| i.send(session[:last_order]) }
+        if session[:dir] == 'rev'
+          @active_breweries = @active_breweries.reverse
+          @retired_breweries = @retired_breweries.reverse
+          session[:dir] = 'asc'
+        else
+          session[:dir] = 'rev'
+        end
+    else
+      @active_breweries = Brewery.active
+      @retired_breweries = Brewery.retired
+    end
+
+    order = params[:order] || 'name'
+    if(session[:dir].nil?)
+      session[:dir] = 'asc'
+    end
+    #byebug
+
+    if order == 'name' and session[:last_order] != order
+      @active_breweries = @active_breweries.sort_by(&:name)
+      @retired_breweries = @retired_breweries.sort_by(&:name)
+    elsif order == 'year' and session[:last_order] != order
+      @active_breweries = @active_breweries.sort_by(&:year)
+      @retired_breweries = @retired_breweries.sort_by(&:year)
+    end
+
+    session[:last_order] = order
   end
 
   # GET /breweries/1
@@ -83,5 +112,4 @@ class BreweriesController < ApplicationController
     def brewery_params
       params.require(:brewery).permit(:name, :year, :active)
     end
-
 end
