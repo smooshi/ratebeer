@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<% cache @brewery do %>
 <h2><%= @brewery.name %>
   <% if not @brewery.active  %>
       <span class="label label-info">retired</span>
@@ -21,7 +22,7 @@
 		 <% end %>
 	</tbody>
 </table>
-
+<% end %>
 <p>
 	<% if @brewery.ratings.empty? %>
 			Brewery has not yet been rated!

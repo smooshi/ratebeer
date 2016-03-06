@@ -30,8 +30,11 @@ group :test do
   gem 'launchy'
   gem 'simplecov', require: false
   gem 'webmock'
+  gem 'database_cleaner'
+  gem 'selenium-webdriver'
 end
 
+gem 'rack-mini-profiler'
 gem 'rspec-its'
 gem "nokogiri"
 gem 'web-console', group: :development
@@ -55,6 +58,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+
+gem 'jquery-turbolinks'
 
 # Use unicorn as the app server
 # gem 'unicorn'

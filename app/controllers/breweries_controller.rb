@@ -1,11 +1,14 @@
 class BreweriesController < ApplicationController
   before_action :set_brewery, only: [:show, :edit, :update, :destroy]
   before_action :ensure_that_signed_in, except: [:index, :show]
+  #before_action :skip_if_cached, only:[:index]
+  before_action :expire_cached_brewerylist, only:[:create, :destroy, :update]
   include Order
 
   # GET /breweries
   # GET /breweries.json
   def index
+    @breweries = Brewery.all
     if session[:last_order] != nil
           @active_breweries = Brewery.active.sort_by{ |i| i.send(session[:last_order]) }
           @retired_breweries = Brewery.retired.sort_by{ |i| i.send(session[:last_order]) }
@@ -27,15 +30,15 @@ class BreweriesController < ApplicationController
     end
     #byebug
 
-    if order == 'name' and session[:last_order] != order
-      @active_breweries = @active_breweries.sort_by(&:name)
-      @retired_breweries = @retired_breweries.sort_by(&:name)
-    elsif order == 'year' and session[:last_order] != order
-      @active_breweries = @active_breweries.sort_by(&:year)
-      @retired_breweries = @retired_breweries.sort_by(&:year)
+    if order != session[:last_order]
+      @active_breweries = Brewery.active.sort_by{ |i| i.send(order) }
+      @retired_breweries = Brewery.retired.sort_by{ |i| i.send(order) }
     end
 
     session[:last_order] = order
+  end
+
+  def list
   end
 
   # GET /breweries/1
@@ -112,4 +115,14 @@ class BreweriesController < ApplicationController
     def brewery_params
       params.require(:brewery).permit(:name, :year, :active)
     end
+
+  def skip_if_cached
+    @order = params[:order] || 'name'
+    return render :index if fragment_exist?( "brewerylist-a-#{@order}"  )
+  end
+
+  def expire_cached_brewerylist
+    ["brewerylist-name", "brewerylist-year"].each{ |f| expire_fragment(f) }
+    #["brewerylist-a-name", "brewerylist-a-year","brewerylist-r-name", "brewerylist-r-year"].each{ |f| expire_fragment(f) }
+  end
 end
