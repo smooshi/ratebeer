@@ -34,7 +34,7 @@ group :test do
   gem 'selenium-webdriver'
 end
 #w7
-gem 'sidekiq'
+#gem 'sidekiq'
 gem 'omniauth-github'
 
 

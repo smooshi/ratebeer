@@ -2,8 +2,514 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f21cac12-e05c-4ba2-b186-a097596dc84d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/ratings_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/ratings_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/ratings/index.html.erb" afterPath="$PROJECT_DIR$/app/views/ratings/index.html.erb" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/00-RELEASENOTES" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/BUGS" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/CONTRIBUTING" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/COPYING" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/INSTALL" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/MANIFESTO" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/Makefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/README" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/Makefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/hiredis/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/hiredis/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/hiredis/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/hiredis/COPYING" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/hiredis/Makefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/hiredis/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/hiredis/adapters/ae.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/hiredis/adapters/libev.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/hiredis/adapters/libevent.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/hiredis/adapters/libuv.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/hiredis/async.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/hiredis/async.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/hiredis/dict.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/hiredis/dict.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/hiredis/examples/example-ae.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/hiredis/examples/example-libev.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/hiredis/examples/example-libevent.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/hiredis/examples/example-libuv.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/hiredis/examples/example.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/hiredis/fmacros.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/hiredis/hiredis.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/hiredis/hiredis.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/hiredis/net.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/hiredis/net.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/hiredis/sds.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/hiredis/sds.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/hiredis/test.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/hiredis/zmalloc.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/COPYING" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/ChangeLog" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/INSTALL" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/Makefile.in" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/README" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/autogen.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/bin/jemalloc.sh.in" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/bin/pprof" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/config.guess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/config.stamp.in" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/config.sub" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/configure.ac" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/coverage.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/doc/html.xsl.in" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/doc/jemalloc.xml.in" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/doc/manpages.xsl.in" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/doc/stylesheet.xsl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/internal/arena.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/internal/atomic.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/internal/base.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/internal/bitmap.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/internal/chunk.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/internal/chunk_dss.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/internal/chunk_mmap.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/internal/ckh.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/internal/ctl.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/internal/extent.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/internal/hash.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/internal/huge.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/internal/jemalloc_internal.h.in" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/internal/jemalloc_internal_defs.h.in" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/internal/jemalloc_internal_macros.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/internal/mb.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/internal/mutex.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/internal/private_namespace.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/internal/private_symbols.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/internal/private_unnamespace.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/internal/prng.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/internal/prof.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/internal/public_namespace.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/internal/public_unnamespace.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/internal/ql.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/internal/qr.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/internal/quarantine.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/internal/rb.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/internal/rtree.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/internal/size_classes.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/internal/stats.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/internal/tcache.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/internal/tsd.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/internal/util.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/jemalloc.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/jemalloc_defs.h.in" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/jemalloc_macros.h.in" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/jemalloc_mangle.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/jemalloc_protos.h.in" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/jemalloc/jemalloc_rename.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/msvc_compat/inttypes.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/msvc_compat/stdbool.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/msvc_compat/stdint.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/include/msvc_compat/strings.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/install-sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/src/arena.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/src/atomic.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/src/base.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/src/bitmap.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/src/chunk.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/src/chunk_dss.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/src/chunk_mmap.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/src/ckh.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/src/ctl.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/src/extent.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/src/hash.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/src/huge.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/src/jemalloc.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/src/mb.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/src/mutex.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/src/prof.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/src/quarantine.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/src/rtree.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/src/stats.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/src/tcache.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/src/tsd.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/src/util.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/src/zone.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/include/test/SFMT-alti.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/include/test/SFMT-params.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/include/test/SFMT-params11213.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/include/test/SFMT-params1279.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/include/test/SFMT-params132049.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/include/test/SFMT-params19937.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/include/test/SFMT-params216091.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/include/test/SFMT-params2281.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/include/test/SFMT-params4253.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/include/test/SFMT-params44497.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/include/test/SFMT-params607.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/include/test/SFMT-params86243.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/include/test/SFMT-sse2.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/include/test/SFMT.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/include/test/jemalloc_test.h.in" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/include/test/jemalloc_test_defs.h.in" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/include/test/math.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/include/test/mq.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/include/test/mtx.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/include/test/test.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/include/test/thd.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/integration/MALLOCX_ARENA.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/integration/aligned_alloc.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/integration/allocated.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/integration/allocm.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/integration/mallocx.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/integration/mremap.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/integration/posix_memalign.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/integration/rallocm.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/integration/rallocx.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/integration/thread_arena.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/integration/thread_tcache_enabled.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/integration/xallocx.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/src/SFMT.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/src/math.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/src/mtx.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/src/test.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/src/thd.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/test.sh.in" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/unit/SFMT.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/unit/bitmap.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/unit/ckh.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/unit/hash.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/unit/junk.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/unit/mallctl.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/unit/math.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/unit/mq.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/unit/mtx.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/unit/prof_accum.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/unit/prof_accum.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/unit/prof_accum_a.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/unit/prof_accum_b.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/unit/prof_gdump.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/unit/prof_idump.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/unit/ql.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/unit/qr.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/unit/quarantine.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/unit/rb.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/unit/rtree.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/unit/stats.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/unit/tsd.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/unit/util.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/jemalloc/test/unit/zero.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/linenoise/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/linenoise/Makefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/linenoise/README.markdown" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/linenoise/example.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/linenoise/linenoise.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/linenoise/linenoise.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/COPYRIGHT" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/HISTORY" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/INSTALL" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/Makefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/README" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/doc/contents.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/doc/cover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/doc/logo.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/doc/lua.1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/doc/lua.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/doc/lua.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/doc/luac.1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/doc/luac.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/doc/manual.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/doc/manual.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/doc/readme.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/etc/Makefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/etc/README" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/etc/all.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/etc/lua.hpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/etc/lua.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/etc/lua.pc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/etc/luavs.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/etc/min.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/etc/noparser.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/etc/strict.lua" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/Makefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/fpconv.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/fpconv.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lapi.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lapi.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lauxlib.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lauxlib.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lbaselib.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lcode.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lcode.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/ldblib.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/ldebug.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/ldebug.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/ldo.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/ldo.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/ldump.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lfunc.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lfunc.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lgc.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lgc.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/linit.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/liolib.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/llex.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/llex.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/llimits.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lmathlib.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lmem.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lmem.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/loadlib.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lobject.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lobject.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lopcodes.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lopcodes.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/loslib.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lparser.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lparser.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lstate.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lstate.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lstring.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lstring.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lstrlib.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/ltable.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/ltable.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/ltablib.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/ltm.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/ltm.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lua.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lua.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lua_bit.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lua_cjson.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lua_cmsgpack.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lua_struct.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/luac.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/luaconf.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lualib.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lundump.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lundump.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lvm.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lvm.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lzio.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/lzio.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/print.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/strbuf.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/src/strbuf.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/test/README" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/test/bisect.lua" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/test/cf.lua" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/test/echo.lua" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/test/env.lua" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/test/factorial.lua" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/test/fib.lua" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/test/fibfor.lua" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/test/globals.lua" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/test/hello.lua" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/test/life.lua" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/test/luac.lua" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/test/printf.lua" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/test/readonly.lua" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/test/sieve.lua" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/test/sort.lua" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/test/table.lua" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/test/trace-calls.lua" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/test/trace-globals.lua" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/lua/test/xd.lua" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/deps/update-jemalloc.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/redis.conf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/runtest" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/runtest-cluster" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/runtest-sentinel" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/sentinel.conf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/Makefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/Makefile.dep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/adlist.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/adlist.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/ae.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/ae.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/ae_epoll.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/ae_evport.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/ae_kqueue.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/ae_select.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/anet.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/anet.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/aof.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/asciilogo.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/bio.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/bio.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/bitops.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/blocked.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/cluster.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/cluster.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/config.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/config.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/crc16.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/crc64.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/crc64.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/db.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/debug.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/dict.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/dict.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/endianconv.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/endianconv.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/fmacros.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/help.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/hyperloglog.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/intset.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/intset.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/latency.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/latency.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/lzf.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/lzfP.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/lzf_c.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/lzf_d.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/memtest.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/mkreleasehdr.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/multi.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/networking.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/notify.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/object.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/pqsort.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/pqsort.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/pubsub.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/rand.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/rand.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/rdb.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/rdb.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/redis-benchmark.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/redis-check-aof.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/redis-check-dump.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/redis-cli.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/redis-trib.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/redis.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/redis.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/redisassert.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/release.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/replication.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/rio.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/rio.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/scripting.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/sds.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/sds.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/sentinel.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/setproctitle.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/sha1.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/sha1.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/slowlog.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/slowlog.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/solarisfixes.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/sort.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/sparkline.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/sparkline.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/syncio.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/t_hash.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/t_list.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/t_set.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/t_string.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/t_zset.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/testhelp.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/util.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/util.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/valgrind.sup" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/version.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/ziplist.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/ziplist.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/zipmap.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/zipmap.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/zmalloc.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/src/zmalloc.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/assets/default.conf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/assets/encodings.rdb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/assets/hash-zipmap.rdb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/cluster/cluster.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/cluster/run.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/cluster/tests/00-base.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/cluster/tests/01-faildet.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/cluster/tests/02-failover.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/cluster/tests/03-failover-loop.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/cluster/tests/04-resharding.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/cluster/tests/05-slave-selection.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/cluster/tests/06-slave-stop-cond.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/cluster/tests/07-replica-migration.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/cluster/tests/08-update-msg.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/cluster/tests/09-pubsub.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/cluster/tests/10-manual-failover.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/cluster/tests/11-manual-takeover.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/cluster/tests/helpers/onlydots.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/cluster/tests/includes/init-tests.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/cluster/tmp/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/helpers/bg_complex_data.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/helpers/gen_write_load.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/instances.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/integration/aof-race.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/integration/aof.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/integration/convert-zipmap-hash-on-load.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/integration/logging.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/integration/rdb.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/integration/redis-cli.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/integration/replication-2.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/integration/replication-3.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/integration/replication-4.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/integration/replication-psync.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/integration/replication.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/sentinel/run.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/sentinel/tests/00-base.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/sentinel/tests/01-conf-update.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/sentinel/tests/02-slaves-reconf.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/sentinel/tests/03-runtime-reconf.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/sentinel/tests/04-slave-selection.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/sentinel/tests/05-manual.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/sentinel/tests/06-ckquorum.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/sentinel/tests/includes/init-tests.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/sentinel/tmp/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/support/cluster.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/support/redis.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/support/server.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/support/test.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/support/tmpfile.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/support/util.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/test_helper.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/unit/aofrw.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/unit/auth.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/unit/basic.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/unit/bitops.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/unit/dump.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/unit/expire.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/unit/hyperloglog.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/unit/introspection.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/unit/latency-monitor.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/unit/limits.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/unit/maxmemory.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/unit/memefficiency.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/unit/multi.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/unit/obuf-limits.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/unit/other.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/unit/printver.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/unit/protocol.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/unit/pubsub.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/unit/quit.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/unit/scan.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/unit/scripting.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/unit/slowlog.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/unit/sort.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/unit/type/hash.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/unit/type/list-2.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/unit/type/list-3.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/unit/type/list-common.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/unit/type/list.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/unit/type/set.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/tests/unit/type/zset.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/utils/build-static-symbols.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/utils/cluster_fail_time.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/utils/create-cluster/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/utils/create-cluster/README" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/utils/create-cluster/create-cluster" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/utils/generate-command-help.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/utils/hyperloglog/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/utils/hyperloglog/hll-err.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/utils/hyperloglog/hll-gnuplot-graph.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/utils/install_server.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/utils/lru/README" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/utils/lru/test-lru.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/utils/mkrelease.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/utils/redis-copy.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/utils/redis-sha1.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/utils/redis_init_script" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/utils/redis_init_script.tpl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/utils/speed-regression.tcl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/redis-3.0.7/utils/whatisdoing.sh" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
     </list>
     <ignored path="ratebeer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,27 +579,27 @@
         <entry file="file://$PROJECT_DIR$/app/controllers/ratings_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="54" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
+              <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/ratings/index.html.erb">
+      <file leaf-file-name="config.ru" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.ru">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.53184164">
-              <caret line="42" column="10" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="update_rating_cache.rake" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/tasks/update_rating_cache.rake">
+      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.8888888">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="6" selection-end-column="102" />
+            <state vertical-scroll-proportion="0.15485996">
+              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -104,16 +610,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="beer_club.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/beer_club.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -170,7 +666,6 @@
         <option value="$PROJECT_DIR$/app/views/breweries/show.html.erb" />
         <option value="$PROJECT_DIR$/app/workers/hard_worker.rb" />
         <option value="$PROJECT_DIR$/lib/tasks/update_rating_cache.rake" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/initializers/omniauth.rb" />
         <option value="$PROJECT_DIR$/app/controllers/sessions_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_navigation_links.html.erb" />
@@ -186,6 +681,7 @@
         <option value="$PROJECT_DIR$/app/controllers/beer_clubs_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/ratings_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/ratings/index.html.erb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -593,14 +1089,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/ratings/index.json.jbuilder">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/beers/show.json.jbuilder">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -795,14 +1283,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7710049">
-          <caret line="58" column="24" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/_navigation.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -979,9 +1459,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/ratings/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.5215147">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/tasks/update_rating_cache.rake">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.8888888">
+        <state vertical-scroll-proportion="0.08793104">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="6" selection-end-column="102" />
           <folding />
         </state>
@@ -990,15 +1478,23 @@
     <entry file="file://$PROJECT_DIR$/app/controllers/ratings_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="54" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
+          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/ratings/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/config.ru">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53184164">
-          <caret line="42" column="10" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15485996">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding />
         </state>
       </provider>
