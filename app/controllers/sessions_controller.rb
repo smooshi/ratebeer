@@ -4,6 +4,12 @@ class SessionsController < ApplicationController
 
   end
 
+  def create_oauth
+    @user = User.find_or_create_from_auth_hash(auth_hash)
+    self.current_user = @user
+    redirect_to '/'
+  end
+
   def create
     # haetaan usernamea vastaava käyttäjä tietokannasta
     user = User.find_by username: params[:username]
@@ -22,5 +28,10 @@ class SessionsController < ApplicationController
     session[:user_id] = nil
     # uudelleenohjataan sovellus pääsivulle
     redirect_to :root
+  end
+
+  private
+  def auth_hash
+    request.env['omniauth.auth']
   end
 end

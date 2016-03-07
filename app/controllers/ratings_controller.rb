@@ -1,14 +1,15 @@
 class RatingsController < ApplicationController
+  before_action :expire_cached_toplist, only:[:create]
 
   def index
-  #@users = User.all.sort_by(&:num_of_ratings).reverse
-  @users = User.mostActive(3)
-  @beers = Beer.top(3)
-  @breweries = Brewery.top(3)
-	@ratings = Rating.all
-  @styles = Style.top(3)
-  @newest_rating = Rating.ordered_by_reverse_order
+  @ratings = Rating.includes(:beer, :style, :breweries, :user).all
+  @beers = Rails.cache.read "beer top 3"
+  @users = Rails.cache.read "user top 3"
+  @breweries = Rails.cache.read "brewery top 3"
+  @styles = Rails.cache.read "style top 3"
+  @newest_rating = @ratings.reverse_order
 
+    #Heroku ajaa "rake update_rating_cache" 10min välein, mutta cache clearaa myös kun tehdään uusi rating koska olisi kurjaa tehdä uusi ja ei nähdä sitä?
   end
   
   def new
@@ -37,5 +38,10 @@ class RatingsController < ApplicationController
     rating = Rating.find(params[:id])
     rating.delete if current_user == rating.user
     redirect_to :back
+  end
+
+  private
+  def expire_cached_toplist
+    ["beer top 3", "style top 3", "brewery top 3", "user top 3"].each{ |f| expire_fragment(f) }
   end
 end

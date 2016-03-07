@@ -33,6 +33,10 @@ group :test do
   gem 'database_cleaner'
   gem 'selenium-webdriver'
 end
+#w7
+gem 'sidekiq'
+gem 'omniauth-github'
+
 
 gem 'rack-mini-profiler'
 gem 'rspec-its'

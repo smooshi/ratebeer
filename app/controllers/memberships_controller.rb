@@ -27,6 +27,8 @@ class MembershipsController < ApplicationController
   def create
     @membership = Membership.create params.require(:membership).permit(:user_id, :beer_club_id)
     @membership.user_id = current_user.id
+    @membership.confirmed = false
+
     respond_to do |format|
       if @membership.save and not :user_id.nil?
         current_user.memberships << @membership
@@ -64,6 +66,11 @@ class MembershipsController < ApplicationController
     end
   end
 
+
+  def toggle_confirmed
+    brewery = Brewery.find(params[:id])
+    brewery.update_attribute :active, (not brewery.active)
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_membership

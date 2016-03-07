@@ -1,0 +1,12 @@
+<% if members.count > 0 %>
+  <% members.each do |member| %>
+      <ul class="list-group">
+        <li class="list-group-item"><%= link_to member.user.username, member%>
+          <% if @active_members.find_by_user_id(current_user.id) %>
+              <% if member.confirmed == false %>
+              <%= link_to "confirm member", toggle_confirmed_beer_club_path(:beer_club_id => @beer_club.id, :user_id => member.user.id), method: :post, class: "btn btn-primary" %></li>
+              <% end %>
+          <%end%>
+      </ul>
+  <% end %>
+<%end%>

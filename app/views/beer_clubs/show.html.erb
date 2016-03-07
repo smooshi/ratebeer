@@ -15,13 +15,16 @@
   <%= @beer_club.city %>
 </p>
 <p>
-  <strong>Members:</strong>
-  <% @beer_club.users.each do |user| %>
-    <ul class="list-group">
-    <li class="list-group-item"><%= link_to user.username, user %></li>
-      </ul>
-<% end %>
+  <strong>Active Members:</strong>
+  <p>Number of active members <%= @active_members.count%></p>
+  <%= render 'list', members: @active_members %>
 </p>
+<p>
+  <strong>Pending Members:</strong>
+  <p>Number of pending members <%= @pending_members.count%></p>
+  <%= render 'list', members: @pending_members %>
+</p>
+
 <p>
   <% if not @beer_club.users.include?(current_user) and current_user %>
     <%= form_for(@membership) do |f| %>

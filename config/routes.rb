@@ -34,6 +34,7 @@ Rails.application.routes.draw do
   get 'signin', to: 'sessions#new'
   get 'signout', to: 'sessions#destroy'
   delete 'signout', to: 'sessions#destroy'
+  get 'auth/:provider/callback', to: 'sessions#create_oauth'
 
   #PLACES STUFF:
   resources :places, only:[:index, :show]
@@ -43,6 +44,11 @@ Rails.application.routes.draw do
   get 'beerlist', to:'beers#list'
   get 'ngbeerlist', to:'beers#nglist'
   get 'brewerylist', to:'breweries#list'
+
+  #BEERCLUB TOGGEL
+  resources :beer_clubs do
+    post 'toggle_confirmed', on: :member
+    end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

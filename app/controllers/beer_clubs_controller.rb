@@ -8,9 +8,20 @@ class BeerClubsController < ApplicationController
     @beer_clubs = BeerClub.all
   end
 
+  def toggle_confirmed
+    membership = Membership.find_by_user_id_and_beer_club_id(params[:user_id], params[:beer_club_id])
+    membership.update_attribute :confirmed, true
+    membership.save!
+    redirect_to :back, notice:"Membership confirmed"
+  end
+
   # GET /beer_clubs/1
   # GET /beer_clubs/1.json
   def show
+
+    @active_members = @beer_club.memberships.active
+    @pending_members = @beer_club.memberships.pending
+
     if current_user
       @membership = Membership.new
       @membership.beer_club_id = params[:id]
@@ -38,6 +49,11 @@ class BeerClubsController < ApplicationController
 
     respond_to do |format|
       if @beer_club.save
+        membership = Membership.new
+        membership.user_id = current_user.id
+        membership.beer_club_id = @beer_club.id
+        membership.confirmed = true
+        membership.save
         format.html { redirect_to @beer_club, notice: 'Beer club was successfully created.' }
         format.json { render :show, status: :created, location: @beer_club }
       else
@@ -79,6 +95,6 @@ class BeerClubsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def beer_club_params
-      params.require(:beer_club).permit(:name, :founded, :city)
+      params.require(:beer_club).permit(:name, :founded, :city, :confirmed)
     end
 end
