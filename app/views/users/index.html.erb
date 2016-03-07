@@ -17,9 +17,11 @@
         <td><%= user.ratings.size %></td>
         <td><%= user.favorite_beer %></td>
         <td>
+          <% if current_user %>
           <% if current_user.admin == true and user.active == false %>
               <span class="label label-info">account frozen</span>
           <% end %>
+              <%end%>
         </td>
       </tr>
   <% end %>
