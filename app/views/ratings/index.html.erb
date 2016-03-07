@@ -50,11 +50,3 @@
       <%= render 'list', items: @styles %>
     </div>
   </div>
-
-<p></p>
-All Ratings:
-<ul class="list-group">
-  <% @ratings.each do |rating| %>
-      <li class="list-group-item"> <%= rating.to_s %> by <%= link_to rating.user.username, rating.user %> </li>
-  <% end %>
-</ul>
